@@ -110,6 +110,9 @@ public class ContactsHelper {
 
         List<Person> contacts = new ArrayList<>();
 
+        List<String> valideLastName = new ArrayList<String>("awad","clement","kernec","kervorian","levin","martin","morin","robinaud","venturini");
+        int ageMax = Utils.formatDateToLong("2000-01-01");
+
         Cursor cursor = getContactsCursor(contentResolver);
 
         while (cursor.moveToNext()) {
@@ -128,8 +131,11 @@ public class ContactsHelper {
             String phoneNumber = getContactPhoneNumber(contentResolver, id);
             String email = getContactEmail(contentResolver, id);
 
-            Person person = new Person(name, date, yearUnknown, phoneNumber, email);
-            contacts.add(person);
+            //Filtrer les sync google par nom de famille et age
+            If (valideLastName.contains(name.toLowerCase()) && ageMax > date ) {
+                Person person = new Person(name, date, yearUnknown, phoneNumber, email);
+                contacts.add(person);
+            }
         }
         cursor.close();
         return contacts;
