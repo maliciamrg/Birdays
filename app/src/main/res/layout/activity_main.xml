@@ -27,7 +27,7 @@
         android:id="@+id/container_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.djonique.birdays.activities.MainActivity">
+        tools:context="com.maliciamrg.birdays.activities.MainActivity">
 
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appbar_main"
@@ -74,7 +74,7 @@
             android:layout_margin="@dimen/fab_margin_default"
             app:backgroundTint="@color/accent_green_200"
             app:elevation="6dp"
-            app:layout_behavior="com.djonique.birdays.behaviors.ScrollAwareFABBehavior"
+            app:layout_behavior="com.maliciamrg.birdays.behaviors.ScrollAwareFABBehavior"
             app:pressedTranslationZ="12dp"
             app:rippleColor="@color/ripple"
             app:srcCompat="@drawable/ic_add_grey_24dp" />
